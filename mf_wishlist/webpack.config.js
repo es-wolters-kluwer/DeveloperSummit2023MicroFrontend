@@ -49,7 +49,9 @@ module.exports = {
       name: "mf_wishlist",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "/App":"./src/App"
+      },
       shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({

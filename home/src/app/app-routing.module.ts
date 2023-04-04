@@ -9,19 +9,9 @@ const routes: Routes = [
     redirectTo: '/products',
     pathMatch: 'full',
   },
-  /*   {
-    path: 'products',
-    component: ProductsComponent,
-  }, */
   {
     path: 'products',
-    component: WebComponentWrapper,
-    data: {
-      remoteEntry: 'http://localhost:4001/remoteEntry.js',
-      remoteName: 'react',
-      exposedModule: './ListProductsReactComponent',
-      elementName: 'react-element',
-    } as WebComponentWrapperOptions,
+    component: ProductsComponent,
   },
   {
     path: 'wishlist',

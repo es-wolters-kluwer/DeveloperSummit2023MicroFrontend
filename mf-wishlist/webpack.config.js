@@ -14,6 +14,9 @@ module.exports = {
   devServer: {
     port: 4004,
     historyApiFallback: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   },
 
   module: {
@@ -50,7 +53,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./App":"./src/App"
+        './App': "./src/main.js",
       },
       shared: require("./package.json").dependencies,
     }),

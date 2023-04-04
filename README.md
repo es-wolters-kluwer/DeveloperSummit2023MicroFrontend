@@ -4,7 +4,6 @@ This project start microfrontend
 
 Prerequisites
 - Node.js installed
-- npm installed
 
 ### Getting Started
 Clone the repository:

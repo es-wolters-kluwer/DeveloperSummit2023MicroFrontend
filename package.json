@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-all": "npx concurrently \"npm install start --prefix mf-add-to-wishlist\" \"npm install --force --prefix mf-oauth\" \"npm install --prefix mf-products\" \"npm install --prefix mf-similar-products\" \"npm install --prefix mf-wishlist\"",
-    "start-all": "npx concurrently \"npm run start --prefix mf-add-to-wishlist\" \"npm run start --prefix mf-oauth\" \"npm run start --prefix mf-products\" \"npm run start --prefix mf-similar-products\" \"npm run start --prefix mf-wishlist\"",
-    "install-and-start": "npm run install-all && npm run start-all"
+     "install-all": "npx concurrently  \"npm install --force --prefix mf-oauth\" \"npm install --prefix mf-products\"  \"npm install --prefix mf-wishlist\"",
+     "start-all-dev": "npx concurrently  \"npm run start:live --prefix mf-oauth\" \"npm run start:live --prefix mf-products\"  \"npm run start:live --prefix mf-wishlist\"",
+     "start-all": "npx concurrently  \"npm run start --prefix mf-oauth\" \"npm run start --prefix mf-products\"  \"npm run start --prefix mf-wishlist\"",
+     "start-api": "docker-compose up -d",
+     "start-mf": "npm run install-all && npm run start-all",
+     "start-mf-api-dev": "npm run start-api && npm run install-all && npm run start-all-dev",
+     "start-mf-api": "npm run start-api && npm run install-all && npm run start-all",
+     "install-and-start": "npm run install-all && npm run start-all"
   },
   "repository": {
     "type": "git",
@@ -18,10 +23,5 @@
   "bugs": {
     "url": "https://github.com/bezael/microfrontends-wk/issues"
   },
-  "homepage": "https://github.com/bezael/microfrontends-wk#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.0"
-  }
+  "homepage": "https://github.com/bezael/microfrontends-wk#readme"
 }
